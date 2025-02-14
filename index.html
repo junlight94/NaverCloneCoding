@@ -70,7 +70,7 @@
     </style>
     <!--Body-->
     <style>
-        html, body {
+        html, body, form {
             margin: 0;
             padding: 0;
         }
@@ -94,7 +94,7 @@
         #header {
             text-align: left;
             position: relative;
-            height: 215px;
+            height: 52px;
         }
         #header-hamburger, #header-naverpay, #header-notice {
             position: absolute;
@@ -142,7 +142,57 @@
     </style>
 
     <!--Search-->
-    <style></style>
+    <style>
+        #search > form {
+            display: inline-block;
+            width: 708px; height: 60px;
+            border: 1px solid #03c75a;
+            border-radius: 33px;
+            text-align: left;
+        }
+        #search > form > input {
+            width: 480px; height: 100%;
+            padding: 17px 0;
+            border: none;
+            outline: none;
+            font-size: 2rem;
+            line-height: 24px;
+            font-weight: bold;
+        }
+        #search-right {
+            display: inline-block;
+        }
+        #search-keyboard::before {
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.eae24523.png);
+            background-size: 452px 436px;
+            background-position: -123px -301px;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 14px;
+            content: "";
+            display: block;
+        }
+        #search-recent::before {
+            content: "";
+            display: block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.eae24523.png);
+            background-size: 452px 436px;
+            background-position: -154px -211px;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 6px;
+        }
+        #search-button::before {
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.eae24523.png);
+            background-size: 452px 436px;
+            background-position: -405px -79px;
+            background-repeat: no-repeat;
+            width: 25px;
+            height: 25px;
+            content: "";
+            display: block;
+        }
+    </style>
 
     <!--Navigation-->
     <style></style>
@@ -168,7 +218,17 @@
                     <div></div>
                 </button>
             </div>
-            <div id="search"></div>
+            <div id="search">
+                <form action="">
+                    <label for="search-input"></label>
+                    <input id="search-input" placeholder="검색어 입력해 주세요." type="text">
+                    <div id="search-right">
+                        <button href="#" id="search-keyboard"></button>
+                        <button href="#" id="search-recent"></button>
+                        <button href="#" id="search-button"></button>
+                    </div>
+                </form>
+            </div>
             <div id="navigation"></div>
             <div id="main"></div>
         </div>
