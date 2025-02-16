@@ -157,7 +157,7 @@
         #search > form {
             display: inline-flex;
             width: 708px; height: 60px;
-            border: 1px solid #60afff;
+            border: 1px solid #03c75a;
             border-radius: 33px;
             text-align: left;
         }
@@ -172,9 +172,6 @@
             font-size: 1.2rem;
             line-height: 24px;
             font-weight: bold;
-        }
-        #search-padding {
-            width: 28px;
         }
         #search-right {
             flex: 1;
@@ -224,7 +221,7 @@
             cursor: pointer;
         }
         #search-button > div {
-            background: #60afff;
+            background: #03c75a;
             width: 25px; height: 25px;
         }
         #search-input::placeholder {
@@ -236,6 +233,17 @@
         #search-input:focus::placeholder {
             color: gray;
             filter: brightness(2.0);
+        }
+        #search > form svg {
+            height: 24px; width: 24px;
+        }
+        #search-svg{
+            width: 68px; height: 100%;
+            padding: 17px 16px 17px 27px;
+        }
+        #search-svg svg{
+            width: 24px; height: 24px;
+            fill: #03c75a;
         }
     </style>
 
@@ -271,7 +279,9 @@
             </div>
             <div id="search">
                 <form action="">
-                    <div id="search-padding"></div>
+                    <a id="search-svg" href="#">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path></svg>
+                    </a>
                     <input id="search-input" placeholder="검색어를 입력해 주세요." type="text">
                     <div id="search-right">
                         <button href="#" id="search-keyboard"></button>
