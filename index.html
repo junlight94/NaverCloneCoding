@@ -544,12 +544,36 @@
             margin: 10px 0 0 5px;
             vertical-align: top;
         }
+        #main-newstand-animation {
+            padding-left: 25px;
+            position: relative;
+        }
         #main-newstand-animation a:last-of-type {
             text-overflow: ellipsis;
             width: 400px;
             white-space: nowrap;
             display: inline-block;
             overflow: hidden;
+        }
+        #main-newstand-animation a:last-of-type::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 7px;
+                left: 12px;
+                background-color: var(--color_dot_divider);
+                width: 1px;
+                height: 12px;
+        }
+        #main-newstand-animation::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 7px;
+            left: 12px;
+            background-color: var(--color_dot_divider);
+            width: 1px;
+            height: 12px;
         }
         #main-newstand-grid > div {
             height: 100%;
