@@ -548,6 +548,10 @@
             padding-left: 25px;
             position: relative;
         }
+        #main-newstand-animation a:first-of-type {
+            line-height: 26px;
+            vertical-align: 7px;
+        }
         #main-newstand-animation a:last-of-type {
             text-overflow: ellipsis;
             width: 400px;
@@ -556,14 +560,14 @@
             overflow: hidden;
         }
         #main-newstand-animation a:last-of-type::before {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 7px;
-                left: 12px;
-                background-color: var(--color_dot_divider);
-                width: 1px;
-                height: 12px;
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            background-color: var(--color_dot_divider);
+            margin: 12px 6px 0 6px;
+            border-radius: 50%;
+            vertical-align: top;
         }
         #main-newstand-animation::before {
             content: "";
@@ -575,6 +579,22 @@
             width: 1px;
             height: 12px;
         }
+        .right a:last-of-type {
+            padding-left: 25px;
+            display: inline-block;
+            position: relative;
+            font-weight: bold;
+        }
+        .right a:last-of-type::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 7px;
+            left: 12px;
+            width: 1px;
+            height: 12px;
+            background-color: var(--color_dot_divider);
+        }
         #main-newstand-grid > div {
             height: 100%;
             background-color: white;
@@ -585,6 +605,113 @@
         #main-newstand footer {
             padding: 10px 0 11px;
             border-top: 1px solid var(--color_border_in);
+        }
+        #main-newstand footer {
+            font-size: 1.3rem;
+            line-height: 35px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        #main-newstand footer .news {
+            color: var(--color_news);
+        }
+        #main-newstand footer .list, #main-newstand footer .grid {
+            position: absolute;
+            border: none;
+            cursor: pointer;
+        }
+        #main-newstand footer .list {
+            top: 0;
+            right: 49px;
+            padding: 18px 9px 18px 20px;
+            background-color: transparent;
+        }
+        #main-newstand footer .list::before {
+            content: "";
+            display: inline-block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.eae24523.png);
+            background-size: 452px 436px;
+            background-position: -206px -376px;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+        }
+        #main-newstand footer .grid {
+            top: 0;
+            right: 0;
+            padding: 18px 20px 18px 9px;
+            background-color: transparent;
+        }
+        #main-newstand footer .grid::before {
+            content: "";
+            display: inline-block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.eae24523.png);
+            background-size: 452px 436px;
+            background-position: -432px -21px;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+        }
+        #main-newstand footer .total {
+            color: rgba(96, 96, 96, .5);
+        }
+        #main-newstand footer > div {
+            padding: 0 16px;
+        }
+        #main-newstand footer button:first-of-type {
+            position: relative;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid var(--color_button_border);
+            border-radius: 50%;
+            background-color: transparent;
+        }
+        #main-newstand footer button:first-of-type::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.eae24523.png);
+            background-size: 452px 436px;
+            background-position: -193px -424px;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 12px;
+            margin: auto;
+            transform: rotate(180deg);
+        }
+        #main-newstand footer button:nth-of-type(2) {
+            position: relative;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid var(--color_button_border);
+            border-radius: 50%;
+            background-color: transparent;
+        }
+        #main-newstand footer button:nth-of-type(2)::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.eae24523.png);
+            background-size: 452px 436px;
+            background-position: -193px -424px;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 12px;
+            margin: auto;
         }
         #main-right-ad {
             background-size: cover;
@@ -608,7 +735,6 @@
         }
         #main-stock {
             height: 236px;
-
         }
         #main-shopping {
             height: 560px;
@@ -768,10 +894,15 @@
                         </div>
                         <footer>
                             <button><span></span></button>
-                            <div>언론사 더보기1페이지전체/4</div>
+                            <div>
+                                <span class="news">언론사</span>
+                                더보기1
+                                <span class="total">/4</span>
+                            </div>
                             <button><span></span></button>
-                            <button><span></span></button>
-                            <button><span></span></button>
+
+                            <button class="list"><span></span></button>
+                            <button class="grid"><span></span></button>
                         </footer>
                     </section>
                     <section id="main-shopping"></section>
